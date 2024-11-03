@@ -1,0 +1,16 @@
+<svg width="40" height="40" class="ionicon" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- outer circle -->
+    <circle cx="256" cy="160" r="128" fill="none" stroke="url(#paint1_linear)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+    <!-- left ribbon -->
+    <path d="M143.65 227.82L48 400l86.86-.42a16 16 0 0113.82 7.8L192 480l88.33-194.32" fill="url(#paint1_linear)" fill-opacity="0.15" stroke="url(#paint1_linear)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+    <!-- right ribbon -->
+    <path d="M366.54 224L464 400l-86.86-.42a16 16 0 00-13.82 7.8L320 480l-64-140.8" fill="url(#paint1_linear)" fill-opacity="0.15" stroke="url(#paint1_linear)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+    <!-- inner circle -->
+    <circle cx="256" cy="160" r="64" fill="none" stroke="url(#paint1_linear)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+    <defs>
+        <linearGradient id="paint1_linear" x1="1.59976" y1="8.08974e-07" x2="31.8368" y2="17.6727" gradientUnits="userSpaceOnUse">
+            <stop offset="0.259336" stop-color="#FFDB6E"/>
+            <stop offset="1" stop-color="#FFBC5E"/>
+        </linearGradient>
+    </defs>
+</svg>

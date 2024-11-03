@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TITLE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- icons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- all icons from Devicon or Ionicons -->
+    
+    <!-- font here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <!-- if you dislike this font you can make a case for a better one and I might change it -->
+</head>
+
+<body>
+    <!--
+    <header>
+        <div id="socials">
+            <p>Socials</p>
+        </div>
+        <div id="home">
+            <p>Home</p>
+        </div>
+        <div id="whatimdoing">
+            <p>What I'm Doing</p>
+            <!-- link to api page 
+        </div>
+    </header>-->
+    
+    <main>
+        <!-- image and socials -->
+        <aside class="sidebar" data-sidebar>
+            <!-- nametag -->
+            <div class="sidebar-info">
+                <!-- headshot -->
+                <figure class="avatar-box">
+                    <img src="assets/images/me.png" alt="William Wadsworth" width="80">
+                </figure>
+                <!-- name and role -->
+                <div class="info-content">
+                    <h1 class="name" title="William Wadsworth">William Wadsworth</h1>
+                    <p class="title">Software developer</p>
+                </div>
+                <!--  -->
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+
+            <!-- social and contacts -->
+            <div class="sidebar-info_more">
+                <div class="separator"></div> <!-- create space between name and experience -->
+
+                <div class="experience-info">
+                    <ul class="languages-list">
+                        <li class="languages-item" data-tooltip="C">
+                            <i class="devicon-c-plain"></i>
+                        </li>
+                        <li class="languages-item" data-tooltip="C++">
+                            <i class="devicon-cplusplus-plain"></i>
+                        </li>
+                        <li class="languages-item" data-tooltip="Python">
+                            <i class="devicon-python-plain"></i>
+                        </li>
+                        <li class="languages-item" data-tooltip="Rust">
+                            <i class="devicon-rust-original"></i>
+                        </li>
+                        <li class="languages-item" data-tooltip="HTML 5">
+                            <i class="devicon-html5-plain"></i>
+                        </li>
+                        <li class="languages-item" data-tooltip="CSS 3">
+                            <i class="devicon-css3-plain"></i>
+                        </li>
+                    </ul>
+                    <ul class="services-list">
+                        <li class="services-item" data-tooltip="Bash">
+                            <i class="devicon-bash-plain"></i>
+                        </li>
+                        <li class="services-item" data-tooltip="Ubuntu">
+                            <i class="devicon-ubuntu-plain"></i>
+                        </li>
+                        <li class="services-item" data-tooltip="MySQL">
+                            <i class="devicon-mysql-original"></i>
+                        </li>
+                        <li class="services-item" data-tooltip="Raspberry Pi">
+                            <i class="devicon-raspberrypi-plain"></i>
+                        </li>
+                        <li class="services-item" data-tooltip="Vim">
+                            <i class="devicon-vim-plain"></i>
+                        </li>
+                        <li class="services-item" data-tooltip="VSCode">
+                            <i class="devicon-vscode-plain"></i>
+                        </li>
+                        <li class="services-item" data-tooltip="Unreal Engine">
+                            <i class="devicon-unrealengine-original"></i>
+                        </li>
+                        <li class="services-item" data-tooltip="Unity">
+                            <i class="devicon-unity-plain"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="separator"></div> <!-- create space between experience and contact -->
+
+                <ul class="contacts-list">
+                    <!-- email -->
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:leviathanturtle@proton.me" class="contact-link">leviathanturtle@proton.me</a>
+                        </div>
+                    </li>
+                    <!-- phone -->
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+                            <a href="tel:+16783321526" class="contact-link">(678) 332 1526</a>
+                        </div>
+                    </li>
+                    <!-- location -->
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Tampa, Florida</address>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="separator"></div>
+                <!-- social media icons -->
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://linkedin.com/in/william-wadsworth-32a824214" class="social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://github.com/LeviathanTurtle" class="social-link">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN PAGE CONTENT -->
+        <div class="main-content">
+            <!-- navbar -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <button class="navbar-link  active" data-nav-link>About</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Resume</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Portfolio</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Blog</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Contact</button>
+                    </li>
+                </ul>
+            </nav>
+      
+            <!-- about -->
+            <article class="about  active" data-page="about">
+                <header><h2 class="h2 article-title">About me</h2></header>
+      
+                <!-- bio -->
+                <section class="about-text">
+                    <p>
+                        Good morrow. My name is William, and I am an aspiring software engineer.
+                        One of things I enjoy the most is helping people, and C.S. allows me to do
+                        that while also finding creative solutions to problems. Outside of coding,
+                        I enjoy hiking, gaming, learning, and meat.
+                    </p>
+                    <p>
+                        I'm pretty flexible, and am willing to learn anything and everything under
+                        the C.S. umbrella. I'm looking forward to exploring opportunities in the
+                        tech inudstry to enhance my skills. Feel free to reach out if you have
+                        questions.
+                    </p>
+                </section>
+      
+                <!-- services -->
+                <section class="service">
+                  <h3 class="h3 service-title">What I'm doing</h3>
+                  <ul class="service-list">
+                    <li class="service-item">
+                      <div class="service-icon-box">
+                        <img src="icon-rust.svg" alt="rust icon" width="40">
+                      </div>
+                      <div class="service-content-box">
+                        <h4 class="h4 service-item-title">Learning Rust</h4>
+                        <p class="service-item-text">
+                          Building my skills to learn low-level programming with safety and speed in mind.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="service-item">
+                      <div class="service-icon-box">
+                        <img src="icon-certifications.svg" alt="certifications icon" width="40">
+                      </div>
+                      <div class="service-content-box">
+                        <h4 class="h4 service-item-title">Acquiring certifications</h4>
+                        <p class="service-item-text">
+                          Expanding my knowledge and experience to stay up to date with the industry and standards.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="service-item">
+                      <div class="service-icon-box">
+                        <img src="icon-sideproj.svg" alt="side projects icon" width="40">
+                      </div>
+                      <div class="service-content-box">
+                        <h4 class="h4 service-item-title">Side projects</h4>
+                        <p class="service-item-text">
+                          Exploring new ideas and challenges while working hard to decrease workload clutter.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="service-item">
+                      <div class="service-icon-box">
+                        <img src="icon-hardware.svg" alt="hardware icon" width="40">
+                      </div>
+                      <div class="service-content-box">
+                        <h4 class="h4 service-item-title">Tinkering with electronics</h4>
+                        <p class="service-item-text">
+                          Experimenting with hardware to better understand how they interact and to be more versatile.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+            </article>
+
+            <!-- resume -->
+            <article class="resume" data-page="resume">
+                <header><h2 class="h2 article-title">Resume</h2></header>
+                    <!-- education -->
+                    <section class="timeline">
+                        <div class="title-wrapper">
+                            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+                            <h3 class="h3">Education</h3>
+                        </div>
+
+                        <ol class="timeline-list">
+                            <li class="timeline-item">
+                                <h4 class="h4 timeline-item-title">High Point University</h4>
+                                <span>2020 — 2024</span>
+                                <p class="timeline-text">
+                                    B.S. in Computer Science
+                                </p>
+                            </li>
+
+                            <li class="timeline-item">
+                                <h4 class="h4 timeline-item-title">Tampa Preparatory School</h4>
+                                <span>2017 — 2020</span>
+                                <p class="timeline-text">
+                                    High School Diploma
+                                </p>
+                            </li>
+                          
+                            <li class="timeline-item">
+                                <h4 class="h4 timeline-item-title">St. Francis High School</h4>
+                                <span>2016 — 2017</span>
+                                <p class="timeline-text">
+                                    Incomplete (moved states)
+                                </p>
+                            </li>
+                        </ol>
+                    </section>
+      
+                    <!-- experience -->
+                    <section class="timeline">
+                        <div class="title-wrapper">
+                            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+                            <h3 class="h3">Experience</h3>
+                        </div>
+            
+                        <ol class="timeline-list">
+                            <li class="timeline-item">
+                                <h4 class="h4 timeline-item-title">None</h4>
+                                <!--<span>2015 — Present</span>-->
+                                <p class="timeline-text">
+                                    None.
+                                </p>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <!-- skills -->
+                    <section class="skill">
+                        <h3 class="h3 skills-title">My skills</h3>
+              
+                        <ul class="skills-list content-card">
+                            <li class="skills-item">
+                                <div class="title-wrapper">
+                                    <h5 class="h5">Programming languages</h5>
+                                    <data value="50">50%</data>
+                                </div>
+                
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 50%;"></div>
+                                </div>
+                            </li>
+                            <li class="skills-item">
+                                <div class="title-wrapper">
+                                    <h5 class="h5">Web design</h5>
+                                    <data value="30">30%</data>
+                                </div>
+                
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 30%;"></div>
+                                </div>
+                            </li>
+                            <li class="skills-item">
+                                <div class="title-wrapper">
+                                    <h5 class="h5">Version control</h5>
+                                    <data value="60">60%</data>
+                                </div>
+                
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 60%;"></div>
+                                </div>
+                            </li>
+                            <li class="skills-item">
+                                <div class="title-wrapper">
+                                    <h5 class="h5">Problem solving</h5>
+                                    <data value="80">80%</data>
+                                </div>
+                
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+            </article>
+      
+            <!-- portfolio -->
+            <article class="portfolio" data-page="portfolio">
+                <header><h2 class="h2 article-title">Portfolio</h2></header>
+        
+                <section class="projects">
+                    <!-- filters -->
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <button class="active" data-filter-btn>All</button>
+                        </li>
+        
+                        <li class="filter-item">
+                            <button data-filter-btn>Applications</button>
+                        </li>
+                    </ul>
+        
+                    <!-- what is this ??? -->
+                    <div class="filter-select-box">
+                        <button class="filter-select" data-select>
+                            <div class="select-value" data-selecct-value>Select category</div>
+          
+                            <div class="select-icon">
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </div>
+                        </button>
+          
+                        <ul class="select-list">
+                            <li class="select-item">
+                                <button data-select-item>All</button>
+                            </li>
+          
+                            <li class="select-item">
+                                <button data-select-item>Applications</button>
+                            </li>
+                        </ul>
+                    </div>
+          
+                    <!-- projects -->
+                    <ul class="project-list">
+                        <li class="project-item  active" data-filter-item data-category="applications">
+                            <a href="https://github.com/CoreyMLawrence/Comfort-Airlines">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+            
+                                    <img src="assets/images/comfortairlines3.png" alt="Comfort Airlines" loading="lazy">
+                                </figure>
+            
+                                <h3 class="project-title">Comfort Airlines</h3>
+                                <p class="project-category">Applications</p>
+                            </a>
+                        </li>
+                        <li class="project-item  active" data-filter-item data-category="???">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+            
+                                    <img src="assets/images/comingsoon.jpg" alt="Comfort Airlines" loading="lazy">
+                                </figure>
+            
+                                <h3 class="project-title">Keep it secret, keep it safe</h3>
+                                <p class="project-category">???</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+      
+            <!-- blog -->
+            <article class="blog" data-page="blog">
+                <header><h2 class="h2 article-title">Blog</h2></header>
+        
+                <section class="blog-posts">
+                    <ul class="blog-posts-list">
+                        <li class="blog-post-item">
+                            <a href="blog/intro.html">
+                                <figure class="blog-banner-box">
+                                    <img src="assets/images/welcome.png" alt="Website launch" loading="lazy">
+                                </figure>
+                
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">General</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2022-02-23">Nov 2, 2024</time>
+                                    </div>
+                                  
+                                    <h3 class="h3 blog-item-title">Website launch</h3>
+                                    <p class="blog-text">Welcome to my website!</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+      
+            <!-- contact -->
+            <article class="contact" data-page="contact">
+                <header><h2 class="h2 article-title">Contact</h2></header>
+      
+                <section class="mapbox" data-mapbox>
+                    <figure>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d272149.75253319566!2d-82.61908891711592!3d27.994687484373948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2b782b3b9d1e1%3A0xa75f1389af96b463!2sTampa%2C%20FL!5e0!3m2!1sen!2sus!4v1730597699720!5m2!1sen!2sus"
+                                width="400" height="300" loading="lazy"></iframe>
+                    </figure>
+                </section>
+        
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Contact Form</h3>
+                    <form action="#" class="form" data-form id="message-form">
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                        </div>
+        
+                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+        
+                        <button class="form-btn" type="submit" disabled data-form-btn>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Send Message</span>
+                        </button>
+
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <p class="easteregg">cool placeholder text this is not part of the website</p>
+
+    <script src="assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
