@@ -17,7 +17,7 @@ def send_email():
     message_content = data.get('message')
 
     # Mailgun configuration
-    MAILGUN_API_KEY = os.getenv("eb18e8550f34c2cc39e99f3edcdae98b-72e4a3d5-01e46c60")
+    MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
     MAILGUN_DOMAIN = os.getenv("MAILGUN_DOMAIN")
     recipient_email = "yourprotonmail@example.com"  # Replace with your ProtonMail address
 
