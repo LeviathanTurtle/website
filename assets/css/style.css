@@ -1,9 +1,9 @@
 
 
-
+/*
 div {
   border: 1px solid red;
-}
+}*/
 
 .easteregg {
   color: var(--light-gray);
@@ -24,9 +24,7 @@ div {
 }
 
 
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+
 /* vars to reduce repeated properties */ 
 :root {
   /* COLORS */
@@ -106,9 +104,6 @@ div {
 }
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 
 *, *::before, *::after {
   margin: 0;
@@ -129,7 +124,7 @@ button {
   text-align: left;
   cursor: pointer;
 
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 input, textarea {
@@ -149,11 +144,6 @@ input, textarea {
 html { font-family: 'Montserrat', sans-serif; }
 
 body { background: var(--smoky-black); }
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
 
 .sidebar, article {
   background: var(--eerie-black-2);
@@ -242,8 +232,8 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  width: 5px; /* vertical scrollbar */
+  height: 5px; /* horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -279,10 +269,8 @@ article.active {
 }
 
 
-/*-----------------------------------*\
-  #MAIN
-\*-----------------------------------*/
 
+/* MAIN */
 main {
   margin: 15px 12px;
   margin-bottom: 75px;
@@ -290,10 +278,8 @@ main {
 }
 
 
-/*-----------------------------------*\
-  #SIDEBAR
-\*-----------------------------------*/
 
+/* SIDEBAR */
 .sidebar {
   margin-bottom: 15px;
   max-height: 112px;
@@ -495,10 +481,8 @@ main {
 }
 
 
-/*-----------------------------------*\
-  #NAVBAR
-\*-----------------------------------*/
 
+/* NAVBAR */
 .navbar {
   position: fixed;
   bottom: 0;
@@ -533,10 +517,8 @@ main {
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
 
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
 
+/* ABOUT */
 .about .article-title { margin-bottom: 15px; }
 
 .about-text {
@@ -593,10 +575,8 @@ main {
 }
 
 
-/*-----------------------------------*\
-  #RESUME
-\*-----------------------------------*/
 
+/* RESUME */
 .article-title { margin-bottom: 30px; }
 
 /* EDUCATION AND EXPERIENCE */
@@ -663,7 +643,6 @@ main {
 
 .skills-list { padding: 20px; }
 
-
 .skills-item:not(:last-child) { margin-bottom: 15px; }
 
 .skill .title-wrapper {
@@ -693,10 +672,8 @@ main {
 }
 
 
-/*-----------------------------------*\
-  #PORTFOLIO
-\*-----------------------------------*/
 
+/* PORTFOLIO */
 .filter-list { display: none; }
 
 .filter-select-box {
@@ -849,10 +826,8 @@ main {
 }
 
 
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
 
+/* BLOG sort of not really */
 .blog-posts { margin-bottom: 10px; }
 
 .blog-posts-list {
@@ -934,10 +909,8 @@ main {
 }
 
 
-/*-----------------------------------*\
-  #CONTACT
-\*-----------------------------------*/
 
+/* CONTACT */
 .mapbox {
   position: relative;
   height: 250px;
@@ -1038,17 +1011,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
 
-/*-----------------------------------*\
-  #RESPONSIVE
-\*-----------------------------------*/
-
+/* RESPONSIVE STUFF */
 /* responsive larger than 450px screen */
 @media (min-width: 450px) {
   /* PORTFOLIO, BLOG */
   .project-img,
   .blog-banner-box { height: auto; }
 }
-
 
 /* responsive larger than 580px screen */
 @media (min-width: 580px) {
@@ -1210,7 +1179,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .form-btn ion-icon { font-size: 18px; }
 }
 
-
 /* responsive larger than 768px screen */
 @media (min-width: 768px) {
   /* REUSED STYLE */
@@ -1262,7 +1230,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-left: auto;
   }
 }
-
 
 /* responsive larger than 1024px screen */
 @media (min-width: 1024px) {
@@ -1322,7 +1289,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* BLOG */
   .blog-banner-box { height: 230px; }
 }
-
 
 /* responsive larger than 1250px screen */
 @media (min-width: 1250px) {
