@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
 import requests
 import os
 
@@ -17,6 +18,7 @@ def send_email():
     message_content = data.get('message')
 
     # Mailgun configuration
+    load_dotenv()
     MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
     MAILGUN_DOMAIN = os.getenv("MAILGUN_DOMAIN")
     recipient_email = "yourprotonmail@example.com"  # Replace with your ProtonMail address
