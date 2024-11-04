@@ -17,17 +17,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
     <!-- if you dislike this font you can make a case for a better one and I might change it -->
+
+    <noscript>
+        <style>
+            /* if disabled, only show this message */
+            #ddown { display: none; }
+        </style>
+        <div style="text-align: center; padding: 20px; color: var(--white-2);">
+            <h1 class="h1 service-title">You need to enable JavaScript to view this content.</h1>
+        </div>
+    </noscript>
 </head>
 
 <body>
-    <main>
+    <main id="ddown">
         <!-- image and socials -->
         <aside class="sidebar" data-sidebar>
             <!-- nametag -->
             <div class="sidebar-info">
                 <!-- headshot -->
                 <figure class="avatar-box">
-                    <img src="assets/images/me2.png" alt="William Wadsworth" width="80">
+                    <img src="assets/images/grizzly.png" alt="William Wadsworth" width="80">
                 </figure>
                 <!-- name and role -->
                 <div class="info-content">
@@ -615,6 +625,7 @@
                             </div>
                             <button id="fetch-fox-fact" class="about-text" style="font-weight: bold;">Get Image</button>
                         </li>
+                        <!-- NOTE THAT THIS IS NOT RANDOM AND WILL ONLY GET 1 PHOTO -->
                         <li class="stuff-item">
                             <h3 class="h3">random bear image</h3>
                             <p class="about-text subtext">(Bears are pretty cool)</p>
@@ -633,7 +644,7 @@
         </div>
     </main>
 
-    <p class="easteregg">cool placeholder text this is not part of the website</p>
+    <p id="ddown" class="easteregg">cool placeholder text this is not part of the website</p>
 
     <script src="assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

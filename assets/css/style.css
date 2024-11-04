@@ -1,10 +1,5 @@
 
 
-/*
-div {
-  border: 1px solid red;
-}*/
-
 .easteregg {
   color: var(--light-gray);
   font-size: var(--fs-6);
@@ -123,8 +118,6 @@ button {
   border: none;
   text-align: left;
   cursor: pointer;
-
-  /*border: 1px solid blue;*/
 }
 
 input, textarea {
@@ -957,6 +950,10 @@ main {
   font-size: small;
 }
 
+.hidden-link {
+  color: rgba(255,206,31,.8);
+  display: inline;
+}
 
 
 /* CONTACT */
