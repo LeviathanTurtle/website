@@ -163,14 +163,18 @@
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Blog</button>
                     </li>
+                    <!--
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Contact</button>
+                    </li>-->
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Stuff</button>
                     </li>
                 </ul>
             </nav>
       
             <!-- about -->
-            <article class="about  active" data-page="about">
+            <article class="about active" data-page="about">
                 <header><h2 class="h2 article-title">About me</h2></header>
       
                 <!-- bio -->
@@ -275,8 +279,64 @@
                                 <h4 class="h4 timeline-item-title">St. Francis High School</h4>
                                 <span>2016 — 2017</span>
                                 <p class="timeline-text">
-                                    Incomplete (moved states)
+                                    Incomplete (moved)
                                 </p>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <!-- relevant coursework -->
+                    <section class="timeline">
+                        <div class="title-wrapper">
+                            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+                            <h3 class="h3">Relevant Coursework</h3>
+                        </div>
+
+                        <ol class="coursework-list">
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Adv Prog with Data Structures</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Database Systems</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Discrete Math</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Computer Systems</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Adv Data Structures/Algorithm Dev</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">System Security</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Web Technology</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Computational Physics</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Linear Algebra</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Calculus I</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Technology Ethics</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">High Performance Computing</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Programming Language Design/Translation</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Software Engineering</h4>
+                            </li>
+                            <li class="coursework-item">
+                                <h4 class="h4 timeline-item-title">Reverse Engineering & Malware Analysis</h4>
                             </li>
                         </ol>
                     </section>
@@ -351,20 +411,23 @@
             <!-- portfolio -->
             <article class="portfolio" data-page="portfolio">
                 <header><h2 class="h2 article-title">Portfolio</h2></header>
-        
+                <p class="about-text">Note that my main repository also contains various tools and calculators</p>
+
                 <section class="projects">
                     <!-- filters -->
                     <ul class="filter-list">
                         <li class="filter-item">
                             <button class="active" data-filter-btn>All</button>
                         </li>
-        
                         <li class="filter-item">
                             <button data-filter-btn>Applications</button>
                         </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Games</button>
+                        </li>
                     </ul>
         
-                    <!-- what is this ??? -->
+                    <!--  -->
                     <div class="filter-select-box">
                         <button class="filter-select" data-select>
                             <div class="select-value" data-selecct-value>Select category</div>
@@ -387,6 +450,20 @@
           
                     <!-- projects -->
                     <ul class="project-list">
+                        <li class="project-item  active" data-filter-item data-category="???">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+            
+                                    <img src="assets/images/comingsoon.jpg" alt="Comfort Airlines" loading="lazy">
+                                </figure>
+            
+                                <h3 class="project-title">Keep it secret, keep it safe</h3>
+                                <p class="project-category">???</p>
+                            </a>
+                        </li>
                         <li class="project-item  active" data-filter-item data-category="applications">
                             <a href="https://github.com/CoreyMLawrence/Comfort-Airlines">
                                 <figure class="project-img">
@@ -401,18 +478,18 @@
                                 <p class="project-category">Applications</p>
                             </a>
                         </li>
-                        <li class="project-item  active" data-filter-item data-category="???">
-                            <a href="#">
+                        <li class="project-item  active" data-filter-item data-category="games">
+                            <a href="https://github.com/LeviathanTurtle/My-Stuff/tree/main/Games/Source/Jeopardy">
                                 <figure class="project-img">
                                     <div class="project-item-icon-box">
                                         <ion-icon name="eye-outline"></ion-icon>
                                     </div>
             
-                                    <img src="assets/images/comingsoon.jpg" alt="Comfort Airlines" loading="lazy">
+                                    <img src="assets/images/jeopardy.png" alt="Jeopardy" loading="lazy">
                                 </figure>
             
-                                <h3 class="project-title">Keep it secret, keep it safe</h3>
-                                <p class="project-category">???</p>
+                                <h3 class="project-title">Jeopardy</h3>
+                                <p class="project-category">Games</p>
                             </a>
                         </li>
                     </ul>
@@ -448,6 +525,7 @@
             </article>
       
             <!-- contact -->
+            <!--
             <article class="contact" data-page="contact">
                 <header><h2 class="h2 article-title">Contact</h2></header>
                 
@@ -479,6 +557,60 @@
 
                         <div id="form-message" class="form-message"></div>
                     </form>
+                </section>
+            </article>-->
+
+            <!-- fun stuff -->
+            <article class="stuff" data-page="stuff">
+                <header><h2 class="h2 article-title">Other Stuff</h2></header>
+                
+                <section class="stuff-items">
+                    <ul class="stuff-items-list">
+                        <li class="stuff-item">
+                            <h3 class="h3">random dog facts</h3>
+                            <p class="about-text subtext">(I like dogs)</p>
+                            <!--<div class="separator"></div>-->
+
+                            <div class="content-container">
+                                <img id="dog-image" src="" alt="Random Dog Image" style="display: none;">
+                                <p id="dog-fact" class="about-text">Click the button to get a fun fact about dogs.</p>
+                            </div>
+                            <button id="fetch-dog-fact" class="about-text" style="font-weight: bold;">Get Fact</button>
+                        </li>
+                        <li class="stuff-item">
+                            <h3 class="h3">random cat facts</h3>
+                            <p class="about-text subtext">(I like cats)</p>
+                            <!--<div class="separator"></div>-->
+
+                            <div class="content-container">
+                                <img id="cat-image" src="" alt="Random Cat Image" style="display: none;">
+                                <p id="cat-fact" class="about-text">Click the button to get a fun fact about cats.</p>
+                            </div>
+                            <button id="fetch-cat-fact" class="about-text" style="font-weight: bold;">Get Fact</button>
+                        </li>
+                        <li class="stuff-item">
+                            <h3 class="h3">random fox image</h3>
+                            <p class="about-text subtext">(Foxes are my favorite)</p>
+                            <!--<div class="separator"></div>-->
+
+                            <div class="content-container">
+                                <img id="fox-image" src="" alt="Random Fox Image" style="display: none;">
+                            </div>
+                            <button id="fetch-fox-fact" class="about-text" style="font-weight: bold;">Get Image</button>
+                        </li>
+                        <li class="stuff-item">
+                            <h3 class="h3">random bear image</h3>
+                            <p class="about-text subtext">(Bears are pretty cool)</p>
+                            <!--<div class="separator"></div>-->
+
+                            <div class="content-container">
+                                <img id="bear-image" src="" alt="Random Bear Image" style="display: none;">
+                            </div>
+                            <button id="fetch-bear-fact" class="about-text" style="font-weight: bold;">Get Image</button>
+                        </li>
+                    </ul>
+
+                    <p class="about-text">more to come mayhaps ... ?</p>
                 </section>
             </article>
         </div>

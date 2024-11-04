@@ -161,6 +161,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 // contact form
+/*
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.querySelector("[data-form]");
   const inputs = document.querySelectorAll("[data-form-input]");
@@ -233,4 +234,80 @@ document.getElementById("message-form").addEventListener("submit", function(even
       messageDisplay.textContent = "An error occurred while sending your message.";
       messageDisplay.style.color = "red";
   });
-});
+});*/
+
+
+
+// dog api stuff
+document.getElementById('fetch-dog-fact').addEventListener('click', fetchDogFact);
+function fetchDogFact() {
+  const factPromise = fetch('https://dog-api.kinduff.com/api/facts')
+    .then(response => response.json())
+    .then(data => {
+      const fact = data.facts[0]; // get fact from response
+      document.getElementById('dog-fact').textContent = fact;
+    })
+    .catch(error => {
+      console.error('Error fetching dog fact:', error);
+      document.getElementById('dog-fact').textContent = 'Failed to load a dog fact!';
+    });
+
+    // get dog image
+    const imagePromise = fetch('https://dog.ceo/api/breeds/image/random')
+      .then(response => response.json())
+      .then(data => {
+        const imageUrl = data.message;
+        const dogImageElement = document.getElementById('dog-image');
+        dogImageElement.src = imageUrl;
+        dogImageElement.style.display = 'flex';
+      })
+      .catch(error => {
+        console.error('Error fetching dog image:', error);
+      });
+
+  // wait for both API requests to complete
+  Promise.all([factPromise, imagePromise]);
+}
+
+// cat api stuff
+document.getElementById('fetch-cat-fact').addEventListener('click', fetchCatFact);
+function fetchCatFact() {
+  const factPromise = fetch('https://catfact.ninja/fact')
+    .then(response => response.json())
+    .then(data => {
+      const fact = data.fact; // get fact from response
+      document.getElementById('cat-fact').textContent = fact; // update HTML text
+    })
+    .catch(error => {
+      console.error('Error fetching cat fact:', error);
+      document.getElementById('cat-fact').textContent = 'Failed to load a cat fact!';
+    });
+
+  // get cat image
+  const catImageElement = document.getElementById('cat-image');
+  // direct link to image, uses timestamp to prevent caching
+  catImageElement.src = `https://cataas.com/cat?${new Date().getTime()}`;
+  catImageElement.style.display = 'flex';
+}
+
+// fox api stuff
+document.getElementById('fetch-fox-fact').addEventListener('click', fetchFoxImg);
+function fetchFoxImg() {
+  const imagePromise = fetch('https://randomfox.ca/floof/')
+    .then(response => response.json())
+    .then(data => {
+      const foxImageElement = document.getElementById('fox-image');
+      foxImageElement.src = data.image;
+      foxImageElement.style.display = 'flex';
+    })
+    .catch(error => console.error(error));
+}
+
+// bear api stuff
+document.getElementById('fetch-bear-fact').addEventListener('click', fetchBearImg);
+function fetchBearImg() {
+  const bearImageElement = document.getElementById('bear-image');
+  bearImageElement.src = `https://placebear.com/400/300?${new Date().getTime()}`;
+  bearImageElement.style.display = 'block';
+}
+
