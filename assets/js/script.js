@@ -82,7 +82,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 /* --- API STUFF --- */
-// dog api stuff
+// --- DOG API ----------------------------------
 document.getElementById('fetch-dog-fact').addEventListener('click', fetchDogFact);
 function fetchDogFact() {
   const factPromise = fetch('https://dog-api.kinduff.com/api/facts')
@@ -113,7 +113,7 @@ function fetchDogFact() {
   Promise.all([factPromise, imagePromise]);
 }
 
-// cat api stuff
+// --- CAT API ----------------------------------
 document.getElementById('fetch-cat-fact').addEventListener('click', fetchCatFact);
 function fetchCatFact() {
   const factPromise = fetch('https://catfact.ninja/fact')
@@ -134,7 +134,7 @@ function fetchCatFact() {
   catImageElement.style.display = 'flex';
 }
 
-// fox api stuff
+// --- FOX API ----------------------------------
 document.getElementById('fetch-fox-fact').addEventListener('click', fetchFoxImg);
 function fetchFoxImg() {
   const imagePromise = fetch('https://randomfox.ca/floof/')
@@ -147,15 +147,18 @@ function fetchFoxImg() {
     .catch(error => console.error(error));
 }
 
-// bear api stuff
+// --- BEAR API ---------------------------------
 document.getElementById('fetch-bear-fact').addEventListener('click', fetchBearImg);
 function fetchBearImg() {
   const bearImageElement = document.getElementById('bear-image');
-  bearImageElement.src = `https://placebear.com/400/300?${new Date().getTime()}`;
-  bearImageElement.style.display = 'block';
+  // I think the sizes are 300-800x200-600. This was done by trial and error so I could be wrong
+  const randomWidth = Math.floor(Math.random() * (800-300 + 1)) + 300;
+  const randomHeight = Math.floor(Math.random() * (600-200 + 1)) + 200;
+  bearImageElement.src = `https://placebear.com/${randomWidth}/${randomHeight}?${new Date().getTime()}`;
+  bearImageElement.style.display = 'flex';
 }
 
-// weather api stuff
+// --- WEATHER API ------------------------------
 // Check if Geolocation is supported
 function getUserLocation() {
   if (navigator.geolocation) {
@@ -171,32 +174,38 @@ function successCallback(position) {
 }
 function errorCallback(error) {
   console.error("Error getting location:", error);
-  alert("Unable to retrieve location. Please enable location access to view weather.");
+  //alert("Unable to retrieve location. Please enable location access to view weather.");
+
+  const forecastContainer = document.getElementById("forecast");
+  forecastContainer.innerHTML = "";  // Clear any previous data
+
+  const errorTag = document.createElement("p");
+  errorTag.innerHTML = `<p class="weather-text">Please enable location to view current weather</p>`;
+  forecastContainer.appendChild(errorTag)
 }
 // get the weather info
 async function getWeatherData(latitude, longitude) {
   const pointUrl = `https://api.weather.gov/points/${latitude},${longitude}`;
   
   try {
-      const response = await fetch(pointUrl);
+    const response = await fetch(pointUrl);
+    const data = await response.json();
+    const forecastUrl = data.properties.forecast;
+    
+    // Fetch the actual weather forecast data
+    try {
+      const response = await fetch(forecastUrl);
       const data = await response.json();
-      const forecastUrl = data.properties.forecast;
       
-      // Fetch the actual weather forecast data
-      try {
-          const response = await fetch(forecastUrl);
-          const data = await response.json();
-          
-          // Display the forecast in your UI
-          displayWeatherData(data.properties.periods);
-      } catch (error) {
-          console.error("Error fetching forecast data:", error);
-      }
+      // Display the forecast in your UI
+      displayWeatherData(data.properties.periods);
+    } catch (error) {
+      console.error("Error fetching forecast data:", error);
+    }
   } catch (error) {
-      console.error("Error fetching grid point data:", error);
+    console.error("Error fetching grid point data:", error);
   }
 }
-
 function displayWeatherData(periods) {
   const forecastContainer = document.getElementById("forecast");
   forecastContainer.innerHTML = "";  // Clear any previous data
@@ -207,11 +216,17 @@ function displayWeatherData(periods) {
     const periodElement = document.createElement("div");
     periodElement.classList.add("forecast-period");
     periodElement.innerHTML = `
-        <h3 class="h3 service-title>${currentPeriod.name}</h3>
-        <p class="weather-text">${currentPeriod.temperature}°${currentPeriod.temperatureUnit}</p>
-        <p class="weather-text">${currentPeriod.shortForecast}</p>
+      <h3 class="h3 service-title>${currentPeriod.name}</h3>
+      <p class="weather-text">${currentPeriod.temperature}°${currentPeriod.temperatureUnit}</p>
+      <p class="weather-text">${currentPeriod.shortForecast}</p>
     `; // <img src="${currentPeriod.icon}" alt="${currentPeriod.shortForecast}">
     forecastContainer.appendChild(periodElement);
   }
 }
-window.onload = getUserLocation;
+
+// Trigger stuff when the page loads
+window.onload = function() {
+  getUserLocation();
+};
+
+// --- 
