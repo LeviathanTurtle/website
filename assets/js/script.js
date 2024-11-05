@@ -1,11 +1,9 @@
 'use strict';
 
-
+/* ------ */
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -13,47 +11,6 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-//const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-//const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  //overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-//modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-//overlay.addEventListener("click", testimonialsModalFunc);
-
-
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -66,12 +23,10 @@ select.addEventListener("click", function () { elementToggleFunc(this); });
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
-
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
-
   });
 }
 
@@ -79,9 +34,7 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-
   for (let i = 0; i < filterItems.length; i++) {
-
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
@@ -89,18 +42,14 @@ const filterFunc = function (selectedValue) {
     } else {
       filterItems[i].classList.remove("active");
     }
-
   }
-
 }
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
-
   filterBtn[i].addEventListener("click", function () {
-
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
@@ -108,33 +57,8 @@ for (let i = 0; i < filterBtn.length; i++) {
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
-
-  });
-
-}
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
   });
 }
-
-
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
@@ -143,7 +67,6 @@ const pages = document.querySelectorAll("[data-page]");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add("active");
@@ -154,90 +77,11 @@ for (let i = 0; i < navigationLinks.length; i++) {
         navigationLinks[i].classList.remove("active");
       }
     }
-
   });
 }
 
 
-
-// contact form
-/*
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.querySelector("[data-form]");
-  const inputs = document.querySelectorAll("[data-form-input]");
-  const submitButton = document.querySelector("[data-form-btn]");
-  const messageDisplay = document.getElementById("form-message");
-
-  // for each input field
-  inputs.forEach(input => {
-      input.addEventListener("input", () => {
-          // check if all input fields have values
-          const allFilled = [...inputs].every(input => input.value.trim() !== "");
-          // enable button if all fields are filled
-          submitButton.disabled = !allFilled;
-      });
-  });
-
-  // email validation
-  form.addEventListener("submit", function(event) {
-      event.preventDefault(); // ensure script handles form submission
-
-      const email = form.querySelector("input[name='email']").value;
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // something@domain.com
-
-      // does the input email match the email format
-      if (!emailPattern.test(email)) {
-          messageDisplay.textContent = "Please enter a valid email address.";
-          messageDisplay.style.color = "red"; // show error
-          return;
-      }
-
-      // display success message and reset form
-      messageDisplay.textContent = "Thank you! Your message has been sent.";
-      messageDisplay.style.color = "green";
-      form.reset();
-      submitButton.disabled = true; // disable the button after form reset
-  });
-});
-
-
-
-// conatct form submission
-document.getElementById("message-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  const formData = new FormData(this);
-  const messageDisplay = document.getElementById("form-message");
-
-  fetch('/send-email', {
-      method: 'POST',
-      body: JSON.stringify({
-          fullname: formData.get('fullname'),
-          email: formData.get('email'),
-          message: formData.get('message')
-      }),
-      headers: {
-          'Content-Type': 'application/json'
-      }
-  })
-  .then(response => response.json())
-  .then(data => {
-      if (data.success) {
-          messageDisplay.textContent = "Thank you! Your message has been sent.";
-          messageDisplay.style.color = "green";
-      } else {
-          messageDisplay.textContent = "Error: " + data.error;
-          messageDisplay.style.color = "red";
-      }
-  })
-  .catch(error => {
-      messageDisplay.textContent = "An error occurred while sending your message.";
-      messageDisplay.style.color = "red";
-  });
-});*/
-
-
-
+/* --- API STUFF --- */
 // dog api stuff
 document.getElementById('fetch-dog-fact').addEventListener('click', fetchDogFact);
 function fetchDogFact() {
@@ -311,3 +155,63 @@ function fetchBearImg() {
   bearImageElement.style.display = 'block';
 }
 
+// weather api stuff
+// Check if Geolocation is supported
+function getUserLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+function successCallback(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  getWeatherData(latitude, longitude);
+}
+function errorCallback(error) {
+  console.error("Error getting location:", error);
+  alert("Unable to retrieve location. Please enable location access to view weather.");
+}
+// get the weather info
+async function getWeatherData(latitude, longitude) {
+  const pointUrl = `https://api.weather.gov/points/${latitude},${longitude}`;
+  
+  try {
+      const response = await fetch(pointUrl);
+      const data = await response.json();
+      const forecastUrl = data.properties.forecast;
+      
+      // Fetch the actual weather forecast data
+      try {
+          const response = await fetch(forecastUrl);
+          const data = await response.json();
+          
+          // Display the forecast in your UI
+          displayWeatherData(data.properties.periods);
+      } catch (error) {
+          console.error("Error fetching forecast data:", error);
+      }
+  } catch (error) {
+      console.error("Error fetching grid point data:", error);
+  }
+}
+
+function displayWeatherData(periods) {
+  const forecastContainer = document.getElementById("forecast");
+  forecastContainer.innerHTML = "";  // Clear any previous data
+
+  if (periods && periods.length > 0) {
+    const currentPeriod = periods[0]; // Get the current forecast period
+
+    const periodElement = document.createElement("div");
+    periodElement.classList.add("forecast-period");
+    periodElement.innerHTML = `
+        <h3 class="h3 service-title>${currentPeriod.name}</h3>
+        <p class="weather-text">${currentPeriod.temperature}°${currentPeriod.temperatureUnit}</p>
+        <p class="weather-text">${currentPeriod.shortForecast}</p>
+    `; // <img src="${currentPeriod.icon}" alt="${currentPeriod.shortForecast}">
+    forecastContainer.appendChild(periodElement);
+  }
+}
+window.onload = getUserLocation;
