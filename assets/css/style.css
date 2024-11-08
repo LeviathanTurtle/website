@@ -1368,7 +1368,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .services-list { gap: 10px; }
 
-  .weather-widget { margin-top: 0px; }
+  .weather-widget {
+    margin-top: 0px;
+    max-width: 315px;
+  }
 
   .contacts-list { gap: 25px; }
 
@@ -1384,7 +1387,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .main-content {
     min-width: 50%;
-    width: 50%;
+    width: 55%;
     margin: 0;
   }
 
