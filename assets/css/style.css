@@ -413,6 +413,7 @@ main {
 }
 
 .services-list { gap: 10px; }
+.services-list { gap: 10px; }
 
 .languages-item, .services-item {
   position: relative;
@@ -518,6 +519,7 @@ main {
 .about-text p { margin-bottom: 15px; }
 
 /* SERVICE */
+/*.service { margin-bottom: 35px; }*/
 /*.service { margin-bottom: 35px; }*/
 
 .service-title { margin-bottom: 20px; }
@@ -1077,6 +1079,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* REUSED STYLE */
   .sidebar, article {
     width: 475px;
+    width: 475px;
     margin-inline: auto;
     padding: 30px;
   }
@@ -1109,8 +1112,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     max-height: 180px;
     margin-bottom: 30px;
     overflow: hidden;
+    overflow: hidden;
   }
 
+  .sidebar.active.active { max-height: 625px; }
   .sidebar.active.active { max-height: 625px; }
 
   .sidebar-info { gap: 25px; }
@@ -1142,6 +1147,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .services-list { gap: 22px; }
 
+  .contacts-list { gap: 25px; }
   .contacts-list { gap: 25px; }
 
   .contact-info {
@@ -1301,6 +1307,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: max-content;
     margin: auto;
     z-index: 1;
+    z-index: 1;
   }
 
   /* NAVBAR */
@@ -1375,10 +1382,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* MAIN */
   main {
     max-width: 1700px;
+    max-width: 1700px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: stretch;
+    /*gap: 25px;*/
     /*gap: 25px;*/
   }
 
@@ -1401,6 +1410,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
+  .avatar-box img { width: 200px; }
   .avatar-box img { width: 200px; }
 
   .info-content .name {
