@@ -193,7 +193,7 @@
                         Good morrow. My name is William, and I am an aspiring software engineer.
                         One of things I enjoy the most is helping people, and C.S. allows me to do
                         that while also finding creative solutions to problems. Outside of coding,
-                        I enjoy hiking, gaming, learning, and technology.
+                        I enjoy hiking, gaming, learning, and jazz.
                     </p>
                     <p>
                         I'm pretty flexible, and am willing to learn anything and everything under
@@ -438,11 +438,13 @@
             <!-- portfolio -->
             <article class="portfolio" data-page="portfolio">
                 <header><h2 class="h2 article-title">Portfolio</h2></header>
-                <p class="about-text">
-                    Note that my main repository also contains various tools and calculators. When
-                    I feel the upcoming projects are ready to be revealed I will update their
-                    respective tiles.
-                </p>
+                <section class="about-text">
+                    <p>
+                        Note that my main repository also contains various tools and calculators. When
+                        I feel the upcoming projects are ready to be revealed I will update their
+                        respective tiles.
+                    </p>
+                </section>
 
                 <section class="projects">
                     <!-- filters -->
@@ -458,7 +460,7 @@
                         </li>
                     </ul>
         
-                    <!--  -->
+                    <!-- filters for mobile users -->
                     <div class="filter-select-box">
                         <button class="filter-select" data-select>
                             <div class="select-value" data-selecct-value>Select category</div>
@@ -472,9 +474,11 @@
                             <li class="select-item">
                                 <button data-select-item>All</button>
                             </li>
-          
                             <li class="select-item">
                                 <button data-select-item>Applications</button>
+                            </li>
+                            <li class="select-item">
+                                <button data-select-item>Games</button>
                             </li>
                         </ul>
                     </div>
@@ -569,42 +573,6 @@
                 </section>
             </article>
       
-            <!-- contact -->
-            <!--
-            <article class="contact" data-page="contact">
-                <header><h2 class="h2 article-title">Contact</h2></header>
-                
-                <section class="mapbox" data-mapbox>
-                    <figure>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d272149.75253319566!2d-82.61908891711592!3d27.994687484373948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2b782b3b9d1e1%3A0xa75f1389af96b463!2sTampa%2C%20FL!5e0!3m2!1sen!2sus!4v1730597699720!5m2!1sen!2sus"
-                                width="400" height="300" loading="lazy"></iframe>
-                    </figure>
-                </section>
-
-                <section class="contact-form">
-                    <h3 class="h3 form-title">Contact Form</h3>
-                    <p class="about-text" style="color: red; font-weight: bold;">
-                        Note: the actual functionality of this is temporarily disabled. Please use
-                        my email instead.
-                    </p>
-                    <form action="#" class="form" data-form id="message-form">
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-                        </div>
-        
-                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-        
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                        </button>
-
-                        <div id="form-message" class="form-message"></div>
-                    </form>
-                </section>
-            </article>-->
-
             <!-- fun stuff -->
             <article class="stuff" data-page="stuff">
                 <header><h2 class="h2 article-title">Other Stuff</h2></header>
