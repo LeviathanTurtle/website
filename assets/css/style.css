@@ -1005,7 +1005,7 @@ main {
   /* SIDEBAR */
   .sidebar {
     max-height: 180px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     overflow: hidden;
   }
 
@@ -1295,9 +1295,10 @@ main {
     top: 60px;
     max-height: inherit;
     height: 100%;
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
     /*padding-top: 60px;*/
     z-index: 1;
+    margin: 0 15px;
   }
 
   .sidebar-info { flex-direction: column; }
