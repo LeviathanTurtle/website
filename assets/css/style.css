@@ -640,33 +640,33 @@ main {
 }
 
 /* SKILLS */
-.skills-title { margin-bottom: 20px; }
+.projprog-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.projprog-list { padding: 20px; }
 
-.skills-item:not(:last-child) { margin-bottom: 15px; }
+.projprog-item:not(:last-child) { margin-bottom: 15px; }
 
-.skill .title-wrapper {
+.projprog .title-wrapper {
   display: flex;
   align-items: center;
   gap: 5px;
   margin-bottom: 8px;
 }
 
-.skill .title-wrapper data {
+.projprog .title-wrapper data {
   color: var(--light-gray);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
 }
 
-.skill-progress-bg {
+.projprog-progress-bg {
   background: var(--jet);
   width: 100%;
   height: 8px;
   border-radius: 10px;
 }
 
-.skill-progress-fill {
+.projprog-progress-fill {
   background: var(--text-gradient-blue);
   height: 100%;
   border-radius: inherit;
@@ -731,6 +731,8 @@ main {
 }
 
 .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+
+.projects { margin-bottom: 30px; }
 
 .project-list {
   display: grid;
@@ -829,6 +831,7 @@ main {
 
 
 /* BLOG sort of not really */
+/*
 .blog-posts { margin-bottom: 10px; }
 
 .blog-posts-list {
@@ -907,7 +910,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-}
+}*/
 
 
 
@@ -1004,7 +1007,7 @@ main {
   /* SIDEBAR */
   .sidebar {
     max-height: 180px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     /*overflow: hidden;*/
   }
 
@@ -1093,7 +1096,7 @@ main {
     left: -43px;
   }
 
-  .skills-item:not(:last-child) { margin-bottom: 25px; }
+  .projprog-item:not(:last-child) { margin-bottom: 25px; }
 
   /* PORTFOLIO, BLOG */
   .project-img, .blog-banner-box { border-radius: 16px; }
@@ -1168,6 +1171,8 @@ main {
   /* portfolio and blog grid */
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
+  /*.project-item { width: 75%; }*/
+
   /* CONTACT */
   .input-wrapper { grid-template-columns: 1fr 1fr; }
 
@@ -1233,6 +1238,8 @@ main {
   /* PORTFOLIO */
   .project-list { grid-template-columns: repeat(3, 1fr); }
 
+  /*.project-item { width: 85%; }*/
+
   /* BLOG */
   .blog-banner-box { height: 230px; }
 }
@@ -1296,9 +1303,10 @@ main {
     top: 60px;
     max-height: inherit;
     height: 100%;
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
     /*padding-top: 60px;*/
     z-index: 1;
+    margin: 0 15px;
   }
 
   .sidebar-info { flex-direction: column; }
@@ -1341,4 +1349,6 @@ main {
 
   /* RESUME */
   .timeline-text { max-width: 700px; }
+
+  /*.project-item { width: 100%; }*/
 }
