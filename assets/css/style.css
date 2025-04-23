@@ -1,5 +1,4 @@
 
-
 .easteregg {
   color: var(--light-gray);
   font-size: var(--fs-6);
@@ -13,7 +12,6 @@
   white-space: nowrap;
   overflow: hidden;
 }
-
 
 
 /* vars to reduce repeated properties */ 
@@ -276,7 +274,7 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active.active { max-height: 405px; }
+.sidebar.active.active { max-height: 420px; }
 
 .sidebar-info {
   position: relative;
@@ -950,6 +948,7 @@ main {
 }
 
 
+
 /* RESPONSIVE STUFF */
 /* responsive larger than 450px screen */
 @media (min-width: 450px) {
@@ -1005,8 +1004,8 @@ main {
   /* SIDEBAR */
   .sidebar {
     max-height: 180px;
-    margin-bottom: 15px;
-    overflow: hidden;
+    margin-bottom: 30px;
+    /*overflow: hidden;*/
   }
 
   .sidebar.active.active { max-height: 625px; }
@@ -1213,7 +1212,7 @@ main {
     right: 0;
     width: max-content;
     border-radius: 0 20px;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     box-shadow: none;
   }
 
@@ -1280,7 +1279,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    /*gap: 25px;*/
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .main-content {
@@ -1295,10 +1296,9 @@ main {
     top: 60px;
     max-height: inherit;
     height: 100%;
-    /*margin-bottom: 0;*/
+    margin-bottom: 0;
     /*padding-top: 60px;*/
     z-index: 1;
-    margin: 0 15px;
   }
 
   .sidebar-info { flex-direction: column; }
